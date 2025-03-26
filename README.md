@@ -21,7 +21,7 @@ This repository contains my solutions for various cybersecurity challenges, incl
 
 ## Defensive Security Writeups
 
-### Problem 1: Network Vulnerabilities
+### Problem 1: Secure your Perimeter 
 
 In this challenge, I was provided with a network diagram and a JSON file containing security vulnerabilities detected through Centauros. 
 
@@ -30,6 +30,18 @@ Steps:
 2. Cross-referenced each host with the detected vulnerabilities from Centauros.
 3. Prioritized my assessment based on severity levels provided in the JSON file.
 
+```
+{
+                        "vulnerability_name": "Windows 10 Version 21H2 Security Update",
+                        "synopsis": "The remote Windows host is affected by multiple vulnerabilities.",
+                        "description": "The remote Windows host is missing security update 5039211. It is, therefore, affected by multiple vulnerabilities.",
+                        "solution": "Apply Security Update 5039211.",
+                        "cve": "CVE-2024-29994",
+                        "severity_name": "Critical"
+                    },
+                    {
+
+```
 The five critical vulnerabilities I focused on are:
 
 - **Google Chrome < 125.0.6422.112 Vulnerability**
@@ -37,7 +49,7 @@ The five critical vulnerabilities I focused on are:
 - **Windows 10 Version 21H2 Security Update**
 - **Python Unsupported Version Detection**
 
-After analyzing each of the vulnerabilities, I chose **Windows 10 Version 21H2 Security Update (CVE-2024-29994)** as the most critical, given its potential OS-level impact.
+After analyzing each of the vulnerabilities, I chose **Windows 10 Version 21H2 Security Update (CVE-2024-29994)** as the most critical, given  the scope of its potential OS-level impact.
 
 ### Problem 2: QR Code Decryption
 
