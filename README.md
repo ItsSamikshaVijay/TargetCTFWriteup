@@ -24,11 +24,67 @@ This repository contains my solutions for various cybersecurity challenges, incl
 ### Problem 1: Secure your Perimeter 
 
 In this challenge, I was provided with a network diagram and a JSON file containing security vulnerabilities detected through Centauros. 
+```
+{
+                        "vulnerability_name": "Google Chrome < 125.0.6422.112 Vulnerability",
+                        "synopsis": "A web browser installed on the remote Windows host is affected by a vulnerability.",
+                        "description": "The version of Google Chrome installed on the remote Windows host is prior to 125.0.6422.112.",
+                        "solution": "Upgrade to Google Chrome version 125.0.6422.112 or later.",
+                        "cve": "CVE-2024-5274",
+                        "severity_name": "Critical"
+                    },
+                    {
+{
+                        "vulnerability_name": "Microsoft Edge (Chromium) < 126.0.2592.56 Multiple Vulnerabilities",
+                        "synopsis": "The remote host has an web browser installed that is affected by multiple vulnerabilities.",
+                        "description": "The version of Microsoft Edge installed on the remote Windows host is prior to 126.0.2592.56. It is, therefore, affected by multiple vulnerabilities.",
+                        "solution": "Upgrade to Microsoft Edge version 126.0.2592.56 or later.",
+                        "cve": "CVE-2024-5830",
+                        "severity_name": "Critical"
+                    },
 
+   {
+                        "vulnerability_name": "Windows 10 Version 21H2 Security Update",
+                        "synopsis": "The remote Windows host is affected by multiple vulnerabilities.",
+                        "description": "The remote Windows host is missing security update 5039211. It is, therefore, affected by multiple vulnerabilities.",
+                        "solution": "Apply Security Update 5039211.",
+                        "cve": "CVE-2024-29994",
+                        "severity_name": "Critical"
+                    },
+                    {
+  {
+                        "vulnerability_name": "Python Unsupported Version Detection",
+                        "synopsis": "The remote host contains one or more unsupported versions of Python.",
+                        "description": "The remote host contains one or more unsupported versions of Python.",
+                        "solution": "Upgrade to a version of Python that is currently supported.",
+                        "cve": "CVE-2021-87459",
+                        "severity_name": "Critical"
+                    },
+                    {
+   {
+                        "vulnerability_name": "Google Chrome < 125.0.6422.112 Vulnerability",
+                        "synopsis": "A web browser installed on the remote Windows host is affected by a vulnerability.",
+                        "description": "The version of Google Chrome installed on the remote Windows host is prior to 125.0.6422.112.",
+                        "solution": "Upgrade to Google Chrome version 125.0.6422.112 or later.",
+                        "cve": "CVE-2024-5274",
+                        "severity_name": "Critical"
+                    },
+                    {
+
+
+```
 Steps:
 1. Analyzed the network diagram to identify the hosts within the environment.
 2. Cross-referenced each host with the detected vulnerabilities from Centauros.
 3. Prioritized my assessment based on severity levels provided in the JSON file.
+
+
+The five critical vulnerabilities I focused on are:
+
+- **Google Chrome < 125.0.6422.112 Vulnerability**
+- **Microsoft Edge (Chromium) < 126.0.2592.56 Multiple Vulnerabilities**
+- **Windows 10 Version 21H2 Security Update**
+- **Python Unsupported Version Detection**
 
 ```
 {
@@ -42,12 +98,6 @@ Steps:
                     {
 
 ```
-The five critical vulnerabilities I focused on are:
-
-- **Google Chrome < 125.0.6422.112 Vulnerability**
-- **Microsoft Edge (Chromium) < 126.0.2592.56 Multiple Vulnerabilities**
-- **Windows 10 Version 21H2 Security Update**
-- **Python Unsupported Version Detection**
 
 After analyzing each of the vulnerabilities, I chose **Windows 10 Version 21H2 Security Update (CVE-2024-29994)** as the most critical, given  the scope of its potential OS-level impact.
 
