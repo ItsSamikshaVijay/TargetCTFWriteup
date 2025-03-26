@@ -9,13 +9,13 @@ This repository contains my solutions for various cybersecurity challenges, incl
 ## Table of Contents
 
 1. [Defensive Security Writeups](#defensive-security-writeups)
-   - [Problem 1: Network Vulnerabilities](#problem-1-network-vulnerabilities)
-   - [Problem 2: QR Code Decryption](#problem-2-qr-code-decryption)
+   - [Problem 1: Secure Your Perimeter](#problem-1-Secure-your-Perimeter)
+   - [Problem 2: Investigate a Suspicious Email](#problem-2-qr-code-decryption)
    - [Suricata Analysis](#suricata-analysis)
 2. [Offensive Security Writeups](#offensive-security-writeups)
-   - [Information Gathering](#information-gathering)
-   - [Website Phishing Simulation](#website-phishing-simulation)
-   - [XOR Encryption with Base64](#xor-encryption-with-base64)
+   - [Problem 1: Find your Targets](#information-gathering)
+   - [Problem 2: Build a Credential Harvester](#website-phishing-simulation)
+   - [Problem 3: Squishy MFA - XOR Encryption with Base](#xor-encryption-with-base64)
 
 ---
 
@@ -101,7 +101,7 @@ The five critical vulnerabilities I focused on are:
 
 After analyzing each of the vulnerabilities, I chose **Windows 10 Version 21H2 Security Update (CVE-2024-29994)** as the most critical, given  the scope of its potential OS-level impact.
 
-### Problem 2: QR Code Decryption
+### Problem 2: Investigate a Suspicious Email 
 
 In this challenge, I scanned a QR code and received the output `Synt{rirel_pgs_arrqf_ebg13}`. This seemed to be an encoded message. After analyzing the format, I realized that the message was encoded using the **ROT13** cipher. 
 
@@ -121,7 +121,7 @@ Through this, I discovered 8 distinct compromised users by analyzing the Suricat
 
 ## Offensive Security Writeups
 
-### Information Gathering
+### Problem 1: Find your Targets
 
 In this task, I was asked to gather information about a potential target employee, Alex Lee, who had no publicly available information. Through social media connections and researching friends of Alex, I discovered a GitHub link that led me to the flag.
 
@@ -130,7 +130,7 @@ In this task, I was asked to gather information about a potential target employe
 2. Found a reply to Camilla's post from Alex Lee with a link to their GitHub.
 3. Accessed the GitHub to retrieve the flag.
 
-### Website Phishing Simulation
+### Problem 2: Investigate a Suspicious Email
 
 For the phishing simulation, I cloned a website and used a local server to host it. I set default credentials (username: username, password: password), which allowed me to retrieve the flag.
 
@@ -141,7 +141,7 @@ For the phishing simulation, I cloned a website and used a local server to host 
 
 The flag was: `h4rv3ster_h3r0`.
 
-### XOR Encryption with Base64
+### Problem 3: Squishy MFA- XOR Encryption with Base64
 
 In this challenge, the flag was encoded using Base64 and XOR encryption. The key for XOR decryption was hidden in the date of a company email. 
 
