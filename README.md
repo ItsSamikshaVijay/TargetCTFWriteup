@@ -107,8 +107,7 @@ In this challenge, I scanned a QR code and received the output `Synt{rirel_pgs_a
 
 So yeah, I tossed that flag into a cipher program and let it do the heavy lifting for me. My educated guess paid off, and I ended up with a (kinda) legible message. First, I got "Ever", then "Seem", followed by "rch 13"—and that’s when it clicked. I know a cipher decryptor called ROT13. And guess what? It’s a substitution cipher.
 
-
-
+![alt text](p1.png)
 
 After analyzing the format, I realized that the message was encoded using the **ROT13** cipher. 
 
