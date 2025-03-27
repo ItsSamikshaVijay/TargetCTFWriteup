@@ -105,14 +105,9 @@ After analyzing each of the vulnerabilities, I chose **Windows 10 Version 21H2 S
 ![alt text](sso.png)
 In this challenge, I scanned a QR code and received the output `Synt{rirel_pgs_arrqf_ebg13}`. Right away, I realized I had overlooked something obvious—the format was supposed to be flag{...}, but instead, I got synt{...}. That had to mean it was encoded in some cipher. Time to figure out which one. It clearly wasn’t Base64 or SHA-256, so those were off the table. The word “synt” stood out, and I started noticing a pattern—letters seemed to be mapped, like f → s, y → l, a → n, and g → t. That suggested some kind of substitution cipher, and the key appeared to be "flag".I briefly considered Vigenère, but the presence of numbers made that unlikely. So, it had to be a straightforward substitution cipher. 
 
-So yeah, I tossed that flag into a cipher program and let it do the heavy lifting for me. My educated guess paid off, and I ended up with a (kinda) legible message. First, I got "Ever", then "Seem", followed by "rch 13"—and that’s when it clicked. I know a cipher decryptor called ROT13. And guess what? It’s a substitution cipher.
+So yeah, I tossed that flag into a cipher program and let it do the heavy lifting for me. My educated guess paid off, and I ended up with a (kinda) legible message. First, I got "Ever", then "Seem", followed by "rch 13"—and that’s when it clicked. I know a cipher decryptor called ROT13. And guess what? It’s a substitution cipher. That's how I got the flag!
 
 ![alt text](p1.png)
-
-After analyzing the format, I realized that the message was encoded using the **ROT13** cipher. 
-
-- **Decoded message**: `Flag{evershouldbe13}`
-- The flag was: `flag{ever_should_be_13}`.
 
 ### Suricata Analysis
 
