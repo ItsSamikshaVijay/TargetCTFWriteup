@@ -102,7 +102,7 @@ The five critical vulnerabilities I focused on are:
 After analyzing each of the vulnerabilities, I chose **Windows 10 Version 21H2 Security Update (CVE-2024-29994)** as the most critical, given  the scope of its potential OS-level impact.
 
 ### Problem 2: Investigate a Suspicious Email 
-
+![alt text](sso.png)
 In this challenge, I scanned a QR code and received the output `Synt{rirel_pgs_arrqf_ebg13}`. This seemed to be an encoded message. After analyzing the format, I realized that the message was encoded using the **ROT13** cipher. 
 
 - **Decoded message**: `Flag{evershouldbe13}`
