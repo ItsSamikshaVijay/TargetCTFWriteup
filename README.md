@@ -113,12 +113,17 @@ So yeah, I tossed that flag into a cipher program and let it do the heavy liftin
 
 ### Suricata Analysis
 
-I analyzed Suricata logs to detect malicious activity:
+**IOC Detection**  
 
+I reviewed the Suricata documentation for the `alert` function and noticed it was missing the necessary content for detection. After adding `content: "wood-chewers.trees"`, the alert triggered, successfully identifying the indicator of compromise (IOC) and revealing the flag.
+
+I analyzed Suricata logs to detect malicious activity:
+I went through the Suricata logs and tracked the source IP addresses. There were 8 distinct IP addresses all pointing to the same destination IP, so that meant 8 compromised users. The answer was 8.
+It turns out that the destination IP was using the POST function, which is typically a sign that user credentials were being sent to a source( in this case, likely an attacker). That made it pretty clear why there were multiple compromised users.
+
+So essentially this is a summary of my observations.
 1. **Identified compromised users** by tracking the source IP addresses.
 2. **Multiple POST requests** pointed to the same destination IP, indicating credential exfiltration.
-
-Through this, I discovered 8 distinct compromised users by analyzing the Suricata logs.
 
 ---
 
@@ -126,7 +131,7 @@ Through this, I discovered 8 distinct compromised users by analyzing the Suricat
 
 ### Problem 1: Find your Targets
 
-In this task, I was asked to gather information about a potential target employee, Alex Lee, who had no publicly available information. Through social media connections and researching friends of Alex, I discovered a GitHub link that led me to the flag.
+In this Open Source Intelligence (OSINT) task, I was asked to gather information about a potential target employee, Alex Lee, who had no publicly available information. Through social media connections and researching friends of Alex, I discovered a GitHub link that led me to the flag.
 
 **Steps**:
 1. Searched for friends of Alex Lee (Olivia Stone, Maxwell, Camilla Grey).
