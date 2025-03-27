@@ -4,6 +4,8 @@
 
 This repository contains my solutions for various cybersecurity challenges, including defensive and offensive security tasks. The challenges involve vulnerability identification, decoding encrypted data, Suricata analysis, and phishing simulations. The solutions are broken into two sections: Defensive Security and Offensive Security. 
 
+This repository showcases my approach to solving different cybersecurity challenges. Each task required critical thinking, an understanding of various tools, and the ability to apply theory to real-world scenarios. I look forward to expanding my knowledge and continuing to tackle more challenges in the future.
+
 ---
 
 ## Table of Contents
@@ -158,12 +160,6 @@ In this challenge, the flag was encoded using Base64 and XOR encryption. The key
 2. Reversed the XOR encryption to retrieve the correct flag.
 
 Finally, I submitted the QR code after encoding it back into Base64 to obtain the correct flag.
-
----
-
-## Conclusion
-
-This repository showcases my approach to solving different cybersecurity challenges. Each task required critical thinking, an understanding of various tools, and the ability to apply theory to real-world scenarios. I look forward to expanding my knowledge and continuing to tackle more challenges in the future.
 
 ---
 
